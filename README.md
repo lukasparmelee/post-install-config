@@ -1,7 +1,6 @@
 # osTicket - Post-Install Configuration
 
-This tutorial outlines the **post-install configuration** of the open-source help desk ticketing system **osTicket**.  
-The objective of this lab was to configure roles, departments, SLAs, help topics, and user access within the osTicket environment to simulate a functional IT support system.
+This tutorial outlines the **post-install configuration** of the open-source help desk ticketing system **osTicket**. The objective of this lab was to configure roles, departments, SLAs, help topics, and user access within the osTicket environment to simulate a functional IT support system.
 
 ---
 
@@ -56,8 +55,7 @@ Understood the difference between:
 
 **Path:** Admin Panel → Agents → Roles  
 
-Created a new role called **Supreme Admin**, granting full permissions for ticket management, configuration, and system settings.  
-This role allows top-level administrative control over all osTicket features.
+Created a new role called **Supreme Admin**, granting full permissions for ticket management, configuration, and system settings. This role allows top-level administrative control over all osTicket features.
 
 ---
 
@@ -68,8 +66,7 @@ This role allows top-level administrative control over all osTicket features.
 
 **Path:** Admin Panel → Agents → Departments  
 
-Added a department named **SysAdmins** to handle technical and backend issues.  
-Departments determine ticket visibility and workflow, such as separating **Help Desk**, **SysAdmins**, and **Networking** responsibilities.
+Added a department named **SysAdmins** to handle technical and backend issues. Departments determine ticket visibility and workflow, such as separating **Help Desk**, **SysAdmins**, and **Networking** responsibilities.
 
 ---
 
@@ -80,8 +77,7 @@ Departments determine ticket visibility and workflow, such as separating **Help 
 
 **Path:** Admin Panel → Agents → Teams  
 
-Created a **Team** named **Online Banking** to pull agents from multiple departments.  
-Teams improve collaboration across different technical groups and allow shared ticket responsibilities.
+Created a **Team** named **Online Banking** to pull agents from multiple departments. Teams improve collaboration across different technical groups and allow shared ticket responsibilities.
 
 ---
 
@@ -93,10 +89,9 @@ Teams improve collaboration across different technical groups and allow shared t
 **Path:** Admin Panel → Settings → User Settings  
 
 Updated registration settings to:
-- **Require registration and login** to create tickets  
 - **Unchecked** the option allowing unregistered users to create tickets  
 
-This ensures only verified users can submit support requests.
+This ensures unregistered users can submit support requests.
 
 ---
 
@@ -164,11 +159,6 @@ Created Help Topics to categorize tickets:
 - Other  
 
 These topics route tickets to the appropriate departments or teams automatically.
-
----
-
-### 🧹 Disk Sanitization
-After completing the configuration, the Azure virtual machine was deleted to ensure all temporary data and credentials were securely removed.
 
 ---
 
