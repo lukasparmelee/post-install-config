@@ -35,8 +35,8 @@ The objective of this lab was to configure roles, departments, SLAs, help topics
 ## ⚙️ Configuration Steps
 
 ### Step 1: Access the osTicket Panels
-- **Admin/Analyst Login:** [http://localhost/osTicket/scp/login.php](http://localhost/osTicket/scp/login.php)  
-- **End User Portal:** [http://localhost/osTicket](http://localhost/osTicket)
+- **Admin/Analyst Login:**
+- **End User Portal:** 
 
 <p align="center">
   <img src="./admin-panel.png" alt="osTicket Admin and Agent Panels" width="80%"/>
