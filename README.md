@@ -39,7 +39,8 @@ The objective of this lab was to configure roles, departments, SLAs, help topics
 - **End User Portal:** [http://localhost/osTicket](http://localhost/osTicket)
 
 <p align="center">
-  <img src="./admin-agent-panels.png" alt="osTicket Admin and Agent Panels" width="80%"/>
+  <img src="./admin-panel.png" alt="osTicket Admin and Agent Panels" width="80%"/>
+  <img src="./agent-panel.png" alt="osTicket Admin and Agent Panels" width="80%"/>
 </p>
 
 Understood the difference between:
