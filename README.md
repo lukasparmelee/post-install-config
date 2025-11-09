@@ -1,99 +1,187 @@
-<p align="center">
-  <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo" width="300"/>
-</p>
-
 # osTicket - Post-Install Configuration
 
-This tutorial outlines the **post-installation configuration** of the open-source help desk ticketing system **osTicket**, focusing on administrative setup, roles, departments, and ticket workflow management.
+This tutorial outlines the **post-install configuration** of the open-source help desk ticketing system **osTicket**.  
+The objective of this lab was to configure roles, departments, SLAs, help topics, and user access within the osTicket environment to simulate a functional IT support system.
 
 ---
 
-## 🎥 Video Demonstration
-
-- [YouTube: How To Configure osTicket, Post-Installation](https://www.youtube.com)
+### 🎥 Video Demonstration
+**YouTube:** [How To Configure osTicket, Post-Installation](https://www.youtube.com/watch?v=)
 
 ---
 
-## 🧰 Environments and Technologies Used
-
+### 🧰 Environments and Technologies Used
 - Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop Protocol (RDP)
+- Remote Desktop (RDP)
 - Internet Information Services (IIS)
-- osTicket Web Interface
+- osTicket (Help Desk Ticketing System)
 
 ---
 
-## 💻 Operating System Used
+### 💻 Operating Systems Used
 - Windows 10 (21H2)
 
 ---
 
-## ⚙️ Post-Install Configuration Objectives
-
-1. Configure system settings and admin panel
-2. Set up roles, departments, and teams
-3. Create and assign user accounts and permissions
-4. Configure help topics and ticket workflows
-5. Verify email piping and test ticket creation
+### 🏁 Post-Install Configuration Objectives
+1. Access and distinguish between the **Admin Panel** and **Agent Panel**  
+2. Configure **Roles**, **Departments**, and **Teams** for ticket organization and workflow control  
+3. Create **Agents** (staff) and **Users** (customers)  
+4. Set up **SLA Plans** for response and resolution time management  
+5. Add **Help Topics** to categorize ticket requests  
 
 ---
 
-## 🧩 Configuration Steps
+## ⚙️ Configuration Steps
 
-### Step 1: Access the Admin Panel
+### Step 1: Access the osTicket Panels
+- **Admin/Analyst Login:** [http://localhost/osTicket/scp/login.php](http://localhost/osTicket/scp/login.php)  
+- **End User Portal:** [http://localhost/osTicket](http://localhost/osTicket)
+
 <p align="center">
-  <img src="./postinstall-1.png" width="80%" alt="osTicket Admin Panel"/>
+  <img src="./admin-agent-panels.png" alt="osTicket Admin and Agent Panels" width="80%"/>
 </p>
 
-After installation, navigate to the Admin Panel by logging in as the system administrator. Verify that the installation was successful and review the system settings for accuracy (site name, URL, and default email).
+Understood the difference between:
+- **Admin Panel:** for system configuration and settings  
+- **Agent Panel:** for handling and managing support tickets  
 
 ---
 
-### Step 2: Configure Roles and Departments
+### Step 2: Configure Roles
 <p align="center">
-  <img src="./postinstall-2.png" width="80%" alt="osTicket Roles and Departments"/>
+  <img src="./roles.png" alt="osTicket Roles Configuration" width="80%"/>
 </p>
 
-Create new **roles** (e.g., Help Desk Agent, Supervisor) and **departments** (e.g., IT Support, Customer Service). Roles determine permissions, while departments organize incoming tickets by category.
+**Path:** Admin Panel → Agents → Roles  
+
+Created a new role called **Supreme Admin**, granting full permissions for ticket management, configuration, and system settings.  
+This role allows top-level administrative control over all osTicket features.
 
 ---
 
-### Step 3: Add Teams and Agents
+### Step 3: Configure Departments
 <p align="center">
-  <img src="./postinstall-3.png" width="80%" alt="osTicket Teams and Agents"/>
+  <img src="./departments.png" alt="osTicket Departments Configuration" width="80%"/>
 </p>
 
-Assign agents to specific departments or teams to define who handles different types of tickets. Ensure that each agent has the correct access level for their responsibilities.
+**Path:** Admin Panel → Agents → Departments  
+
+Added a department named **SysAdmins** to handle technical and backend issues.  
+Departments determine ticket visibility and workflow, such as separating **Help Desk**, **SysAdmins**, and **Networking** responsibilities.
 
 ---
 
-### Step 4: Configure Help Topics and Ticket Settings
+### Step 4: Configure Teams
 <p align="center">
-  <img src="./postinstall-4.png" width="80%" alt="osTicket Help Topics"/>
+  <img src="./teams.png" alt="osTicket Teams Configuration" width="80%"/>
 </p>
 
-Create **Help Topics** to categorize ticket submissions (e.g., “Password Reset,” “Network Issue”). This improves routing and response efficiency.
+**Path:** Admin Panel → Agents → Teams  
+
+Created a **Team** named **Online Banking** to pull agents from multiple departments.  
+Teams improve collaboration across different technical groups and allow shared ticket responsibilities.
 
 ---
 
-### Step 5: Configure Email Settings and Test Ticket Creation
+### Step 5: Configure User Settings
 <p align="center">
-  <img src="./postinstall-5.png" width="80%" alt="osTicket Email and Tickets"/>
+  <img src="./user-settings.png" alt="osTicket User Settings" width="80%"/>
 </p>
 
-Set up system email addresses for ticket creation and notifications. Test ticket creation and assignment to verify the configuration works properly.
+**Path:** Admin Panel → Settings → User Settings  
+
+Updated registration settings to:
+- **Require registration and login** to create tickets  
+- **Unchecked** the option allowing unregistered users to create tickets  
+
+This ensures only verified users can submit support requests.
 
 ---
 
-## 🧾 About
+### Step 6: Configure Agents (Support Staff)
+<p align="center">
+  <img src="./agents.png" alt="osTicket Agents Configuration" width="80%"/>
+</p>
 
-This project demonstrates the **post-installation configuration** of osTicket in a Windows environment. The process reinforces concepts of **user management**, **departmental organization**, and **ticket routing**, essential skills in **IT service desk operations**.
+**Path:** Admin Panel → Agents → Add New  
 
-**Skills Demonstrated:**
-- osTicket Administrative Configuration  
-- Role and Department Setup  
-- Ticket Routing and Workflow Management  
-- System Email Configuration  
-- Azure VM and IIS Management  
+Created the following agents:  
+- **Jane** — Assigned to **SysAdmins Department**  
+- **John** — Assigned to **Support Department**  
+
+Agents represent internal IT staff responsible for resolving tickets.
 
 ---
+
+### Step 7: Configure Users (End Users)
+<p align="center">
+  <img src="./users.png" alt="osTicket Users Configuration" width="80%"/>
+</p>
+
+**Path:** Agent Panel → Users → Add New  
+
+Added two users (customers):  
+- **Karen**  
+- **Ken**  
+
+End users submit tickets via the user portal and receive responses from agents.
+
+---
+
+### Step 8: Configure SLA Plans
+<p align="center">
+  <img src="./sla.png" alt="osTicket SLA Configuration" width="80%"/>
+</p>
+
+**Path:** Admin Panel → Manage → SLA  
+
+Configured three SLA plans to manage response and resolution expectations:
+
+| SLA Plan | Grace Period | Schedule |
+|-----------|---------------|-----------|
+| Sev-A | 1 hour | 24/7 |
+| Sev-B | 4 hours | 24/7 |
+| Sev-C | 8 hours | Business Hours |
+
+SLAs ensure timely support based on ticket priority.
+
+---
+
+### Step 9: Configure Help Topics
+<p align="center">
+  <img src="./helptopics.png" alt="osTicket Help Topics Configuration" width="80%"/>
+</p>
+
+**Path:** Admin Panel → Manage → Help Topics  
+
+Created Help Topics to categorize tickets:
+- Business Critical Outage  
+- Personal Computer Issues  
+- Equipment Request  
+- Password Reset  
+- Other  
+
+These topics route tickets to the appropriate departments or teams automatically.
+
+---
+
+### 🧹 Disk Sanitization
+After completing the configuration, the Azure virtual machine was deleted to ensure all temporary data and credentials were securely removed.
+
+---
+
+## 🧾 Summary
+
+This lab completed the **post-install configuration** of osTicket, transforming it into a fully operational help desk system.  
+By configuring users, SLAs, roles, and ticket topics, this project demonstrates the ability to manage IT service environments and implement workflow automation within an enterprise support system.
+
+---
+
+### 🧠 Skills Demonstrated
+- osTicket Administration & Configuration  
+- Azure Virtual Machine Management  
+- IIS and Web Server Integration  
+- User Account & Role Management  
+- Service Level Agreement Implementation  
+- ITSM Workflow Design
