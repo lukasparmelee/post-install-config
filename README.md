@@ -4,11 +4,6 @@ This tutorial outlines the **post-install configuration** of the open-source hel
 
 ---
 
-### 🎥 Video Demonstration
-**YouTube:** [How To Configure osTicket, Post-Installation](https://www.youtube.com/watch?v=)
-
----
-
 ### 🧰 Environments and Technologies Used
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop (RDP)
