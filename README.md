@@ -13,7 +13,7 @@ This tutorial outlines the **post-install configuration** of the open-source hel
 ---
 
 ### 💻 Operating Systems Used
-- Windows 10 (21H2)
+- Windows 10
 
 ---
 
