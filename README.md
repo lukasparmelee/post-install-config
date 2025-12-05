@@ -156,18 +156,3 @@ Created Help Topics to categorize tickets:
 These topics route tickets to the appropriate departments or teams automatically.
 
 ---
-
-## 🧾 Summary
-
-This lab completed the **post-install configuration** of osTicket, transforming it into a fully operational help desk system.  
-By configuring users, SLAs, roles, and ticket topics, this project demonstrates the ability to manage IT service environments and implement workflow automation within an enterprise support system.
-
----
-
-### 🧠 Skills Demonstrated
-- osTicket Administration & Configuration  
-- Azure Virtual Machine Management  
-- IIS and Web Server Integration  
-- User Account & Role Management  
-- Service Level Agreement Implementation  
-- ITSM Workflow Design
